@@ -9,14 +9,25 @@ namespace GenericsMax
         public static double MaximumFloat(double valueOne, double valueTwo, double valueThree)
 
         {
-            if (valueOne.CompareTo(valueTwo) > 0 && valueOne.CompareTo(valueThree) > 0)
+            if (valueOne.CompareTo(valueTwo) > 0 && valueOne.CompareTo(valueThree) > 0 ||
+                   valueOne.CompareTo(valueTwo) >= 0 && valueOne.CompareTo(valueThree) > 0 ||
+                   valueOne.CompareTo(valueTwo) > 0 && valueOne.CompareTo(valueThree) >= 0)
+
                 return valueOne;
 
-            if (valueTwo.CompareTo(valueOne) > 0 && valueTwo.CompareTo(valueThree) > 0)
+
+            if (valueTwo.CompareTo(valueOne) > 0 && valueTwo.CompareTo(valueThree) > 0 ||
+                    valueTwo.CompareTo(valueOne) >= 0 && valueTwo.CompareTo(valueThree) > 0 ||
+                    valueTwo.CompareTo(valueOne) > 0 && valueTwo.CompareTo(valueThree) >= 0)
                 return valueTwo;
 
-            else
+            if (valueThree.CompareTo(valueOne) > 0 && valueThree.CompareTo(valueTwo) > 0 ||
+                    valueThree.CompareTo(valueOne) >= 0 && valueThree.CompareTo(valueTwo) > 0 ||
+                    valueThree.CompareTo(valueOne) > 0 && valueThree.CompareTo(valueTwo) >= 0)
+
                 return valueThree;
+
+            return valueOne;
         }
     }
 }

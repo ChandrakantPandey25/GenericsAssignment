@@ -21,7 +21,7 @@ namespace GenericsMax
                     Console.WriteLine("Maximum value is = " + floatResult);
                     break;
                 case 3:
-                    string stringResult = MaxString.MaximumString("i","am","hero");
+                    string stringResult = MaxString.MaximumString("Welcome","to","Program");
                     Console.WriteLine("Maximum value is = " + stringResult);
                     break;
 
