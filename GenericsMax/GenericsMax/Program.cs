@@ -11,6 +11,7 @@ namespace GenericsMax
             Console.WriteLine("Enter 2 to find Maximum of three float numbers ");
             Console.WriteLine("Enter 3 to find Maximum of three strings ");
             Console.WriteLine("Enter 4 to find Maximum of three using Generic method  ");
+            Console.WriteLine("Enter 5 to find Maximum of three using Generic class  ");
             switch(Convert.ToInt32(Console.ReadLine()))
                 {
                 case 1:
@@ -34,6 +35,17 @@ namespace GenericsMax
                     MaxGenericMethod.GenericMethod<int>(4, 6, 8);
                     MaxGenericMethod.GenericMethod<double>(4.5, 6.8, 8.9);
                    
+                    break;
+                case 5:
+
+                    string p4 = "Horse";
+                    string p5 = "Goat";
+                    string p6 = "Dog";
+                    
+                    MaxGenericClass<string>.MaxValue(p4, p5, p6);
+                    MaxGenericClass<int>.MaxValue(4, 6, 8);
+                    MaxGenericClass<double>.MaxValue(4.5, 6.8, 8.9);
+
                     break;
 
 
